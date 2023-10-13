@@ -14,8 +14,14 @@ mongoose.connect('mongodb://localhost:27017/multidisciplinario', {useUnifiedTopo
     
 //Importar y usar las rutas
 const administradorRoutes = require('./routes/administrador');
-
+const pagosRoutes = require('./routes/pagos')
+const reservaAventura = require('./routes/reservas-aventura')
+const reservaCabaña = require('./routes/reservas-cabañas')
 app.use('/administrador', administradorRoutes);   
+app.use('/pagos', pagosRoutes);
+app.use('/reservas/aventuras', reservaAventura)
+app.use('/reservas/cabanas', reservaCabaña)
+
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`)
