@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Comentario = require('../models/comentario');
+const Comentario = require('../models/comentarios');
 
 router.get('/comentarios', (req, res) => {
     Comentario.find()

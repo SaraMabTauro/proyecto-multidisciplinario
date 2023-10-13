@@ -1,39 +1,37 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose")
 
-const administradoEsquema = new mongoose.Schema({
-    idAdministador:{
-        type: String,
-        required: true,
-        unique : true
+const adminstradorSchema = mongoose.Schema({
+
+    idAdmin: {
+        type: Number
     },
-
     nombre:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
-
-    apellidos: {
-        type: String,
-        required: true
+    apellido_paterno:{
+        type:String,
+        required:true
     },
-
-    email: {
-        type: String,
-        required: true,
-        unique: true
+     apellido_materno:{
+        type:String,
+        required:true
     },
-
-    usuario: {
-        type: String,
-        required: true,
-        unique: true
+    email:{
+        type:String,
+        required:true
     },
-
-    contraseña: {
-        type: String,
-        required: true
+    nombreDeUsuario:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:Number,
+        required:true
     }
+    
+    
 
 });
 
-module.exports = mongoose.model('Administrador', administradoEsquema);
+module.exports=mongoose.model('admin',adminstradorSchema);
