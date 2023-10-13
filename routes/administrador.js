@@ -8,4 +8,4 @@ router.get('/', (req, res) => {
         .catch(err => res.status(400).json({ error: err.message}));
 });
 
-module.exports = router;
+module.exports = router; 
