@@ -8,7 +8,7 @@ const comentarioSchema = new mongoose.Schema({
     },
 
     id_usuario: {
-        type: Number,
+        type: mongoose.Schema.ObjectId,
         required: true
     },
 

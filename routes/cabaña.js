@@ -28,7 +28,7 @@ router.get("/users/:id", (req, res) => {
 });
 
 router.put("/users/:id", (req, res) => {
- const {id} =req.params;
+ const {id} = req.params;
  const{idCabaña,descripcion,precio}=req.body;
  cabañaSchema
     .updateOne({_id:id},{$set:{idCabaña,descripcion,precio}})
